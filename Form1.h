@@ -113,10 +113,13 @@ namespace tpcarrewineleve {
 		/// </summary>
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 				// A COMPLETER ////////////////////////////////////////////////////////////////////////
-				pcarre1->Dessiner(this);
-				pcarre1->Deplacer(0,30);
-				pcarre1->Effacer(this);
-				 
+				//pcarre1->Dessiner(this);
+				pcarre1->anime(this, 1, 1);
+				//pcarre1->Deplacer(0, 30);	
+				
+				
+				//pcarre1->Effacer(this);
+				
 			 
 			 }
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {

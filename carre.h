@@ -116,10 +116,20 @@ ref class CCarre
 			/// Dessine le carré 
 			/// </summary>
 			/// <param name="form">pointeur sur la fenêtre dans laquelle on dessine.</param>
-			void Dessiner(System::Windows::Forms::Form ^form)
+			void Dessiner(System::Windows::Forms::Form^ form)
 			{
-				Graphics ^g = form->CreateGraphics();
-				g->FillRectangle(gcnew SolidBrush(color), sx,sy, cote, cote);
+				Graphics^ g = form->CreateGraphics();
+				g->FillRectangle(gcnew SolidBrush(color), sx, sy, cote, cote);
+				
+
+
+			}
+			void anime(System::Windows::Forms::Form^ form, int dx,int dy) {
+				
+				sx += dx;
+				sy += dy;
+				Effacer(form);
+				Dessiner(form);
 			}
 
 			/// <summary>
