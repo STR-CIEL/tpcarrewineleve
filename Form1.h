@@ -35,6 +35,10 @@ namespace tpcarrewineleve {
 			
 			
 			// A COMPLETER /////////////////////////////////////////////////////////////////////////////////
+			pcarre1 -> Setsx(10);
+			pcarre1->Setsy(10);
+			pcarre1->SetCote(20);
+
 
 
 
@@ -95,9 +99,10 @@ namespace tpcarrewineleve {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(854, 562);
+			this->ClientSize = System::Drawing::Size(1146, 562);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 
 		}
@@ -109,10 +114,13 @@ namespace tpcarrewineleve {
 	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
 				// A COMPLETER ////////////////////////////////////////////////////////////////////////
 				pcarre1->Dessiner(this);
-				//		 pcarre1->Effacer(this);
+				pcarre1->Deplacer(0,30);
+				pcarre1->Effacer(this);
 				 
 			 
 			 }
+	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
 

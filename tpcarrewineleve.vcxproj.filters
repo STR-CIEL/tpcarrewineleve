@@ -19,6 +19,9 @@
     <None Include="app.ico">
       <Filter>Fichiers de ressources</Filter>
     </None>
+    <None Include="ClassDiagram.cd">
+      <Filter>Fichiers sources</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tpcarrewineleve.cpp">
